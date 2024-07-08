@@ -1,0 +1,17 @@
+@use 'variables' as vars;
+
+body {
+    background-color: vars.$color-cream;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    grid-template-rows: 1fr auto;
+    padding-inline: 1rem;
+    -ms-overflow-style: hidden; /* for Internet Explorer and Edge */
+    overflow: hidden;
+    scrollbar-width: none; /* for Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

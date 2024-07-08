@@ -1,0 +1,19 @@
+{
+  "name": "product-preview-card-component",
+  "version": "1.0.0",
+  "description": "Solution for the Frontend Mentor Product preview card component challenge. A modern and responsive product preview card showcasing perfume product details and prices.",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": ["Frontend Mentor", "Product preview card", "HTML", "CSS", "SCSS", "Parcel", "BEM", "responsive web design", "perfume product card", "web development"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "sass": "^1.77.6"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0"
+  }
+}

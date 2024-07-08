@@ -1,0 +1,152 @@
+@use 'reset';
+@use 'variables' as vars;
+@use 'base';
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$color-white;
+    border-radius: vars.$radius-main;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: vars.$shadow;
+
+    @media (min-width: vars.$breakpoint) {
+        flex-direction: row;
+        width: 37.5rem;
+        height: 28.1rem;
+    }
+
+    &__image {
+        flex: 40% 0 0;
+
+        @media (min-width: vars.$breakpoint) {
+            flex: 0 0 50%;
+        }
+
+        & img {
+            filter: brightness(0.9);
+        }
+    }
+
+    &__info {
+        flex: 60% 0 0;
+        padding: 1.5rem 1.5rem;
+
+        @media (min-width: vars.$breakpoint) {
+            flex: 0 0 50%;
+            padding: 2rem;
+        }
+
+        .product-card {
+            &__type {
+                font-size: vars.$size-type;
+                font-family: vars.$family-montserrat;
+                color: vars.$color-dark-grayish-blue;
+                text-transform: uppercase;
+                font-weight: vars.$weight-normal;
+                letter-spacing: 4.85px;
+            }
+
+            &__name {
+                font-size: vars.$size-title;
+                font-family: vars.$family-fraunces;
+                font-weight: vars.$weight-bolder;
+                line-height: 2rem;
+                margin-block: 0.8rem 1rem;
+
+                @media (min-width: vars.$breakpoint) {
+                    margin-block: 1.35rem 1.5rem;
+                }
+            }
+
+            &__description {
+                font-size: vars.$size-descripotion;
+                font-family: vars.$family-montserrat;
+                font-weight: vars.$weight-normal;
+                line-height: 1.438rem;
+                word-spacing: .2px;
+                color: vars.$color-dark-grayish-blue;
+            }
+
+            &__price {
+                margin-block: 1.2rem 1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-family: vars.$family-fraunces;
+
+                @media (min-width: vars.$breakpoint) {
+                    margin-block: 1.55rem 1.65rem;
+                }
+
+                &--sale {
+                    font-size: vars.$size-sale-price;
+                    color: vars.$color-dark-cyan;
+                    font-weight: vars.$weight-bolder;
+                    margin-right: 1.2rem;
+                }
+
+                &--regular {
+                    font-size: vars.$size-regular-price;
+                    color: vars.$color-dark-grayish-blue;
+                    text-decoration: line-through;
+                }
+            }
+            
+            &__btn {
+                display: flex;
+                flex-direction: row;
+                background-color: vars.$color-dark-cyan;
+                color: vars.$color-white;
+                font-size: vars.$size-btn;
+                width: 100%;
+                padding-block: .94rem;
+                border: none;
+                border-radius: vars.$radius-btn;
+                justify-content: center;
+                align-items: center;
+                font-family: vars.$family-montserrat;
+                font-weight: vars.$weight-normal;
+                word-spacing: 1px;
+                cursor: pointer;
+                box-shadow: vars.$shadow-btn;
+
+                @media (min-height: vars.$breakpoint) {
+                    padding-block: 0.93rem;
+                }
+
+                svg {
+                    margin-right: .7rem;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: darken(vars.$color-dark-cyan, 20%);
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: vars.$color-very-dark-blue;
+    font-size: 0.9rem;
+    font-family: vars.$family-montserrat;
+    font-weight: vars.$weight-normal;
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-weight: vars.$weight-bolder;
+            color: vars.$color-dark-cyan;
+        }
+
+        &:hover {
+            color: vars.$color-dark-grayish-blue;
+        }
+    }
+}
